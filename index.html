@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee5d8">
+  <meta name="description" content="حلويات أمي نوارة — حلويات وموالح بطابع بيتي مميز في بنغازي، ليبيا.">
+  <title>حلويات أمي نوارة | بنغازي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --cream:#f4eee5; --paper:#fffaf3; --sand:#e6d8c6; --brown:#503b2d;
+      --deep:#30241d; --muted:#887565; --line:#e8ddd0; --accent:#a77b55;
+      --shadow:0 18px 50px rgba(70,48,32,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--deep);font-family:"Cairo",sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1160px,92%);margin:auto}
+    .topline{height:7px;background:linear-gradient(90deg,#8d684b,#c6a27e,#e8d8c4,#8d684b)}
+    header{position:sticky;top:0;z-index:10;background:rgba(244,238,229,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(120,90,65,.13)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--brown)}
+    .brand img{width:58px;height:58px;object-fit:contain;border-radius:50%;background:#fffaf3;border:1px solid var(--line);padding:3px}
+    .brand span{font-family:"Amiri",serif;font-size:25px}
+    .links{display:flex;gap:28px;align-items:center;font-size:14px;color:#685344}
+    .links a:hover{color:var(--accent)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brown);color:#fffaf3;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;transition:.2s}
+    .nav-cta:hover,.btn:hover{background:#6b4d38;transform:translateY(-2px)}
+    .hero{padding:72px 0 62px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:58px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.3px}
+    .eyebrow:before{content:"";width:28px;height:1px;background:var(--accent)}
+    h1{font-family:"Amiri",serif;font-size:clamp(42px,6vw,72px);line-height:1.16;color:var(--brown);margin:18px 0}
+    .hero p{font-size:17px;line-height:2;color:#766454;max-width:520px;margin:0 0 28px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-outline{background:transparent;color:var(--brown);border:1px solid #bda58e}
+    .btn-outline:hover{background:#ede2d4}
+    .hero-art{position:relative;min-height:440px;display:flex;align-items:center;justify-content:center}
+    .hero-art:before{content:"";position:absolute;width:390px;height:390px;border-radius:50%;background:#e7d8c7;right:7%;top:4%}
+    .hero-art:after{content:"";position:absolute;width:90px;height:90px;border:1px solid #b99470;border-radius:50%;left:2%;bottom:8%}
+    .hero-logo{position:relative;z-index:1;width:min(78%,350px);aspect-ratio:1;object-fit:contain;border-radius:50%;padding:16px;background:#fffaf3;box-shadow:var(--shadow);border:9px solid rgba(255,250,243,.7)}
+    .seal{position:absolute;z-index:2;bottom:24px;right:5%;background:var(--paper);border:1px solid var(--line);padding:14px 20px;border-radius:16px;box-shadow:var(--shadow);color:var(--brown);font-family:"Amiri",serif;font-size:19px}
+    .section{padding:76px 0}
+    .section-head{text-align:center;margin-bottom:38px}
+    .kicker{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:1.5px}
+    h2{font-family:"Amiri",serif;color:var(--brown);font-size:clamp(34px,4vw,48px);margin:7px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .about{background:var(--paper);border-block:1px solid var(--line)}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+    .about-mark{background:var(--cream);border:1px solid var(--line);border-radius:28px;padding:32px;text-align:center}
+    .about-mark img{width:min(100%,220px);aspect-ratio:1;object-fit:contain;border-radius:50%;background:#fff;padding:8px}
+    .about-copy h2{margin-top:0}
+    .about-copy p{line-height:2.1;color:#766454;font-size:16px}
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .feature{background:var(--cream);border:1px solid var(--line);padding:10px 15px;border-radius:999px;color:var(--brown);font-size:13px}
+    .products{background:#f1e9df}
+    .tabs{display:flex;justify-content:center;gap:10px;margin:0 0 30px;flex-wrap:wrap}
+    .tab{border:1px solid #cdbba7;background:transparent;color:var(--brown);padding:10px 25px;border-radius:999px;font:600 14px "Cairo";cursor:pointer}
+    .tab.active,.tab:hover{background:var(--brown);border-color:var(--brown);color:#fffaf3}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .product-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 25px rgba(70,48,32,.05);transition:.25s}
+    .product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .product-card img{width:100%;height:235px;object-fit:cover;display:block;background:#e8ddd0}
+    .product-info{padding:16px 18px}
+    .product-info small{color:var(--accent);font-weight:700}
+    .product-info h3{margin:4px 0 0;color:var(--brown);font-size:17px}
+    .product-card[hidden]{display:none}
+    .contact{background:var(--paper)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .contact-card{padding:26px;border:1px solid var(--line);background:var(--cream);border-radius:22px;display:flex;align-items:center;gap:18px}
+    .contact-icon{width:52px;height:52px;flex:0 0 52px;border-radius:16px;background:#e5d6c5;color:var(--brown);display:grid;place-items:center;font-size:23px}
+    .contact-card small{display:block;color:var(--muted);margin-bottom:3px}
+    .contact-card strong{color:var(--brown);font-size:16px}
+    .contact-card a:hover{text-decoration:underline}
+    .contact-bottom{text-align:center;margin-top:32px}
+    footer{background:#3b2c22;color:#f4eade;padding:28px 0;text-align:center}
+    footer p{margin:4px;font-size:13px;color:#d6c4b1}
+    .whatsapp-float{position:fixed;bottom:22px;left:22px;z-index:20;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#218c59;color:white;font-size:27px;box-shadow:0 8px 25px #1b5b3d55}
+    @media(max-width:850px){.hero-grid,.about-grid{grid-template-columns:1fr;gap:28px}.hero{padding-top:48px}.hero-art{min-height:330px}.hero-art:before{width:300px;height:300px}.hero-logo{width:250px}.gallery{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}.about-mark{order:2}}
+    @media(max-width:560px){.nav{min-height:70px}.brand img{width:46px;height:46px}.brand span{font-size:21px}.links{gap:12px;font-size:12px}.nav-cta{display:none}.hero p{font-size:15px}.hero-art{min-height:280px}.hero-art:before{width:250px;height:250px}.hero-logo{width:215px}.seal{font-size:16px;bottom:5px}.section{padding:56px 0}.gallery{gap:11px}.product-card img{height:160px}.product-info{padding:12px}.product-info h3{font-size:14px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">
+        <img src="images/logo.jpg" alt="شعار حلويات أمي نوارة">
+        <span>حلويات أمي نوارة</span>
+      </a>
+      <nav class="links" aria-label="التنقل الرئيسي">
+        <a href="#home">الرئيسية</a><a href="#about">من نحن</a><a href="#products">الأصناف</a><a href="#contact">تواصل معنا</a>
+      </nav>
+      <a class="nav-cta" href="https://wa.me/218925881957" target="_blank" rel="noopener">اطلب عبر واتساب</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">من مطبخنا بكل محبة</span>
+          <h1>حلويات أمي نوارة<br>طعم يفرّح القلب</h1>
+          <p>أهلاً بيكم في عالم حلويات أمي نوارة. اكتشفوا تشكيلتنا من الحلويات والموالح المحضّرة بعناية، ولمسات بيتية تضيف لكل مناسبة مذاقاً أجمل.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#products">اكتشفوا الأصناف</a>
+            <a class="btn btn-outline" href="https://wa.me/218925881957" target="_blank" rel="noopener">تواصلوا معنا</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img class="hero-logo" src="images/logo.jpg" alt="شعار حلويات أمي نوارة">
+          <div class="seal">صُنع بكل حب ♡</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-mark"><img src="images/logo.jpg" alt="حلويات أمي نوارة"></div>
+        <div class="about-copy">
+          <span class="kicker">حكايتنا</span>
+          <h2>اللمة تحلى بطعمنا</h2>
+          <p>حلويات أمي نوارة من بنغازي، نشارككم أصنافاً من الحلو والمالح لتكون حاضرة في جمعتكم ومناسباتكم. تصفحوا الصور واختاروا اللي يعجبكم، وللطلب والاستفسار تواصلوا معنا مباشرة.</p>
+          <div class="features"><span class="feature">حلويات</span><span class="feature">موالح</span><span class="feature">من بنغازي بكل محبة</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="wrap">
+        <div class="section-head"><span class="kicker">تشكيلتنا</span><h2>اختاروا من أصنافنا</h2><p>صور من منتجات حلويات أمي نوارة</p></div>
+        <div class="tabs" role="tablist" aria-label="تصنيف المنتجات">
+          <button class="tab active" data-filter="all" type="button">كل الأصناف</button>
+          <button class="tab" data-filter="sweet" type="button">الحلويات</button>
+          <button class="tab" data-filter="savory" type="button">الموالح</button>
+        </div>
+        <div class="gallery">
+          <article class="product-card" data-category="savory"><img src="images/savory-1.jpg" alt="صنف من الموالح" loading="lazy"><div class="product-info"><small>قسم الموالح</small><h3>من الموالح</h3></div></article>
+          <article class="product-card" data-category="savory"><img src="images/savory-2.jpg" alt="صنف من الموالح" loading="lazy"><div class="product-info"><small>قسم الموالح</small><h3>من الموالح</h3></div></article>
+          <article class="product-card" data-category="sweet"><img src="images/sweet-1.jpg" alt="صنف من الحلويات" loading="lazy"><div class="product-info"><small>قسم الحلويات</small><h3>من الحلويات</h3></div></article>
+          <article class="product-card" data-category="sweet"><img src="images/sweet-2.jpg" alt="صنف من الحلويات" loading="lazy"><div class="product-info"><small>قسم الحلويات</small><h3>من الحلويات</h3></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="section-head"><span class="kicker">يسعدنا تواصلكم</span><h2>خلّونا نجهزوا مناسبتكم</h2><p>للطلب والاستفسار، تواصلوا معنا عبر الوسائل التالية</p></div>
+        <div class="contact-grid">
+          <div class="contact-card"><div class="contact-icon">☏</div><div><small>واتساب / هاتف</small><strong><a href="https://wa.me/218925881957" target="_blank" rel="noopener">0925881957</a></strong></div></div>
+          <div class="contact-card"><div class="contact-icon">f</div><div><small>تابعونا على فيسبوك</small><strong><a href="https://www.facebook.com/people/%D8%AD%D9%84%D9%88%D9%8A%D8%A7%D8%AA-%D8%A7%D9%85%D9%8A-%D9%86%D9%88%D8%A7%D8%B1%D8%A9/61575834141030/" target="_blank" rel="noopener">حلويات أمي نوارة</a></strong></div></div>
+          <div class="contact-card"><div class="contact-icon">⌖</div><div><small>موقعنا</small><strong>بنغازي، ليبيا</strong></div></div>
+          <div class="contact-card"><div class="contact-icon">♡</div><div><small>رسالتنا</small><strong>حلاوة تجمعنا</strong></div></div>
+        </div>
+        <div class="contact-bottom"><a class="btn" href="https://wa.me/218925881957" target="_blank" rel="noopener">راسلونا على واتساب</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><strong>حلويات أمي نوارة</strong><p>بنغازي – ليبيا</p><p>© <span id="year"></span> جميع الحقوق محفوظة</p></div></footer>
+  <a class="whatsapp-float" href="https://wa.me/218925881957" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">◉</a>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const tabs = document.querySelectorAll('.tab');
+    const cards = document.querySelectorAll('.product-card');
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      cards.forEach(card => card.hidden = filter !== 'all' && card.dataset.category !== filter);
+    }));
+  </script>
+</body>
+</html>
